@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte · Nutrik</title>
+  <meta name="description" content="Centro de ayuda de Nutrik — Tu nutricionista en el bolsillo">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #1A1A2E;
+      background: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    header {
+      text-align: center;
+      padding: 40px 0 32px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+      font-weight: 800;
+      color: #1DB954;
+      text-decoration: none;
+      margin-bottom: 24px;
+    }
+    .brand-leaf { font-size: 26px; }
+    h1 {
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: #757575;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #1DB954 0%, #0D9B6A 100%);
+      border-radius: 20px;
+      padding: 32px;
+      color: #FFFFFF;
+      text-align: center;
+      margin: 32px 0 48px;
+      box-shadow: 0 10px 30px rgba(29, 185, 84, 0.2);
+    }
+    .contact-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+    .contact-card p {
+      font-size: 15px;
+      margin-bottom: 20px;
+      opacity: 0.95;
+      color: #FFFFFF;
+    }
+    .contact-button {
+      display: inline-block;
+      background: #FFFFFF;
+      color: #1DB954;
+      padding: 14px 32px;
+      border-radius: 100px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .contact-button:hover {
+      transform: translateY(-1px);
+    }
+    .response-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 13px;
+      opacity: 0.9;
+      color: #FFFFFF;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
+    }
+
+    .faq {
+      margin-bottom: 12px;
+      background: #F8F9FA;
+      border-radius: 14px;
+      overflow: hidden;
+      transition: background 0.2s;
+    }
+    .faq:hover { background: #F3F4F6; }
+    .faq summary {
+      padding: 18px 22px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 400;
+      color: #1DB954;
+      transition: transform 0.2s;
+    }
+    .faq[open] summary::after {
+      content: '−';
+    }
+    .faq-body {
+      padding: 0 22px 20px;
+      font-size: 15px;
+      color: #555555;
+      line-height: 1.65;
+    }
+    .faq-body p { margin-bottom: 10px; }
+    .faq-body ol, .faq-body ul { padding-left: 20px; margin: 10px 0; }
+    .faq-body li { margin-bottom: 4px; }
+    .faq-body strong { color: #1A1A2E; }
+    .faq-body a { color: #1DB954; text-decoration: none; font-weight: 500; }
+    .faq-body a:hover { text-decoration: underline; }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .info-card {
+      background: #F8F9FA;
+      border-radius: 14px;
+      padding: 20px;
+      border: 1px solid #EEEEEE;
+    }
+    .info-card-icon {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    .info-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #1A1A2E;
+    }
+    .info-card p {
+      font-size: 13px;
+      color: #757575;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding-top: 24px;
+      border-top: 1px solid #EEEEEE;
+      font-size: 13px;
+      color: #9E9E9E;
+      text-align: center;
+    }
+    footer a { color: #757575; margin: 0 12px; }
+    @media (max-width: 600px) {
+      .container { padding: 24px 20px 60px; }
+      h1 { font-size: 28px; }
+      h2 { font-size: 21px; }
+      .contact-card { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="/" class="brand"><span class="brand-leaf">🌿</span> Nutrik</a>
+      <h1>Centro de ayuda</h1>
+      <p class="subtitle">Estamos aquí para ayudarte. Revisa las preguntas frecuentes o escríbenos directamente.</p>
+    </header>
+
+    <div class="contact-card">
+      <h2>¿Necesitas ayuda?</h2>
+      <p>Escríbenos a nuestro correo de soporte y te responderemos lo antes posible.</p>
+      <a href="mailto:admin@driftstudio.tech?subject=Soporte%20Nutrik" class="contact-button">
+        admin@driftstudio.tech
+      </a>
+      <div class="response-time">⏱️ Tiempo de respuesta: dentro de 24-48 horas hábiles</div>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="faq">
+      <summary>¿Cómo cancelo mi suscripción Premium?</summary>
+      <div class="faq-body">
+        <p>Para cancelar tu suscripción Premium de Nutrik:</p>
+        <ol>
+          <li>Abre la app <strong>Ajustes</strong> en tu iPhone.</li>
+          <li>Toca tu nombre en la parte superior.</li>
+          <li>Toca <strong>Suscripciones</strong>.</li>
+          <li>Selecciona <strong>Nutrik</strong>.</li>
+          <li>Toca <strong>Cancelar suscripción</strong>.</li>
+        </ol>
+        <p>
+          La cancelación surte efecto al final del período de facturación actual. Seguirás
+          teniendo acceso a las funciones Premium hasta esa fecha.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Cómo funciona el análisis de comida con IA?</summary>
+      <div class="faq-body">
+        <p>
+          Nutrik utiliza Google Gemini AI para analizar fotografías de tus comidas. Cuando
+          tomas o seleccionas una foto, la imagen se envía temporalmente a los servidores de
+          Google, que identifican los alimentos presentes y estiman sus calorías, proteínas,
+          carbohidratos y grasas.
+        </p>
+        <p>
+          <strong>Importante:</strong> las estimaciones son aproximadas. La precisión depende
+          de la calidad de la foto, el ángulo, la iluminación y el tipo de comida. Siempre
+          puedes editar manualmente los valores si no son correctos.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Por qué mis calorías calculadas son diferentes a otras apps?</summary>
+      <div class="faq-body">
+        <p>
+          Nutrik calcula tus calorías diarias usando la fórmula científica <strong>Mifflin-St Jeor</strong>
+          combinada con factores de actividad física estándar (sedentario, moderado, activo).
+          El resultado es una estimación de tu TDEE (gasto energético total diario) ajustada
+          a tu objetivo (bajar, mantener o subir de peso).
+        </p>
+        <p>
+          Diferentes apps pueden usar fórmulas distintas o asumir factores diferentes, por lo
+          que pequeñas variaciones son normales. Si tu meta parece irrealista, consulta con un
+          nutricionista profesional.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Cómo cambio mis metas nutricionales?</summary>
+      <div class="faq-body">
+        <p>
+          Puedes ajustar tus metas en cualquier momento:
+        </p>
+        <ol>
+          <li>Abre Nutrik y ve al tab <strong>Perfil</strong>.</li>
+          <li>Toca <strong>Metas nutricionales</strong>.</li>
+          <li>Modifica las calorías diarias o los macronutrientes.</li>
+          <li>Guarda los cambios.</li>
+        </ol>
+        <p>
+          También puedes actualizar tu peso actual o objetivo en <strong>Detalles personales</strong>
+          y Nutrik recalculará automáticamente tu plan.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Puedo exportar mis datos?</summary>
+      <div class="faq-body">
+        <p>
+          Sí. Nutrik te permite generar <strong>reportes PDF</strong> con tu progreso
+          nutricional. Ve al tab <strong>Informe</strong>, selecciona el período (última semana,
+          15 días o último mes) y toca <strong>Generar Informe PDF</strong>. El PDF se
+          enviará por correo electrónico a la dirección asociada a tu cuenta.
+        </p>
+        <p>
+          Si necesitas un export en formato JSON de todos tus datos (por ejemplo, para migrar
+          a otra app), escríbenos a <a href="mailto:admin@driftstudio.tech">admin@driftstudio.tech</a>
+          y te enviaremos una copia.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Cómo elimino mi cuenta permanentemente?</summary>
+      <div class="faq-body">
+        <p>Para eliminar tu cuenta y todos tus datos:</p>
+        <ol>
+          <li>Abre Nutrik y ve al tab <strong>Perfil</strong>.</li>
+          <li>Ve a <strong>Detalles personales</strong>.</li>
+          <li>Desplázate hasta abajo y toca <strong>Eliminar cuenta</strong>.</li>
+          <li>Confirma la eliminación.</li>
+        </ol>
+        <p>
+          Alternativamente, puedes escribirnos a <a href="mailto:admin@driftstudio.tech">admin@driftstudio.tech</a>
+          y eliminaremos tu cuenta dentro de 30 días. <strong>Esta acción es irreversible</strong> —
+          perderás todos tus registros, reportes y progreso.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Nutrik funciona sin conexión a internet?</summary>
+      <div class="faq-body">
+        <p>
+          Nutrik requiere conexión a internet para la mayoría de sus funciones, incluyendo:
+        </p>
+        <ul>
+          <li>Iniciar sesión y sincronizar tus datos.</li>
+          <li>Analizar fotografías con IA.</li>
+          <li>Generar y enviar reportes PDF.</li>
+          <li>Actualizar tu suscripción.</li>
+        </ul>
+        <p>
+          Algunas funciones como ver tu historial reciente pueden estar disponibles brevemente
+          sin conexión, pero para una experiencia completa necesitas internet.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Los reembolsos de suscripción los gestiona Nutrik?</summary>
+      <div class="faq-body">
+        <p>
+          No. Todos los pagos se procesan a través de Apple App Store. Los reembolsos deben
+          solicitarse directamente a Apple:
+        </p>
+        <p>
+          👉 <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>
+        </p>
+        <p>
+          Si tienes algún problema específico con Nutrik, escríbenos primero y veremos cómo
+          ayudarte.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Cómo funciona el programa de referidos?</summary>
+      <div class="faq-body">
+        <p>
+          Comparte tu código de referido (disponible en tu Perfil) con amigos. Cuando un amigo
+          se suscribe a Premium usando tu código, recibes una <strong>comisión del 30%</strong>
+          recurrente sobre sus pagos mientras ambos mantengan la suscripción activa.
+        </p>
+        <p>
+          El monto mínimo para retirar es <strong>20 USD</strong> y los pagos se realizan vía
+          PayPal. Ve a <strong>Perfil → Recomienda a un amigo</strong> para ver tu código y ganancias.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>Encontré un bug o tengo una sugerencia</summary>
+      <div class="faq-body">
+        <p>
+          ¡Nos encantaría escucharte! Escribe a
+          <a href="mailto:admin@driftstudio.tech?subject=Feedback%20Nutrik">admin@driftstudio.tech</a>
+          describiendo el bug o tu sugerencia. Si es un bug, por favor incluye:
+        </p>
+        <ul>
+          <li>Modelo de iPhone y versión de iOS.</li>
+          <li>Versión de Nutrik (visible en Perfil, al pie de la página).</li>
+          <li>Pasos para reproducir el problema.</li>
+          <li>Capturas de pantalla si es posible.</li>
+        </ul>
+      </div>
+    </details>
+
+    <h2>Información útil</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-card-icon">📧</div>
+        <h3>Correo</h3>
+        <p>admin@driftstudio.tech</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">⏱️</div>
+        <h3>Respuesta</h3>
+        <p>24-48 horas hábiles</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">🌎</div>
+        <h3>Idioma</h3>
+        <p>Español (LATAM)</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon">📱</div>
+        <h3>Plataforma</h3>
+        <p>iOS 14.0 o superior</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        <a href="/">Inicio</a> ·
+        <a href="/privacy.html">Privacidad</a> ·
+        <a href="/terms.html">Términos</a>
+      </p>
+      <p style="margin-top: 8px;">© 2026 Nutrik · Todos los derechos reservados</p>
+    </footer>
+  </div>
+</body>
+</html>
