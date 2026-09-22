@@ -3,360 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nutrika · Your nutritionist, in your pocket</title>
-  <meta name="description" content="Nutrika is your personal AI nutritionist. Log meals, get instant calories and macros, and reach your goals.">
-  <meta property="og:title" content="Nutrika · Your nutritionist, in your pocket">
-  <meta property="og:description" content="Log your meals with AI and get instant calories and macros. Made for Latin America.">
+  <title>Nutrika Fit AI · AI calorie tracking and training</title>
+  <meta name="description" content="Snap your plate and get calories and macros in seconds. Then the coach suggests the workout that fits what you ate: gym programs with video and HIIT at home.">
+  <meta name="theme-color" content="#0B0B0D">
+  <meta property="og:title" content="Nutrika Fit AI · AI calorie tracking and training">
+  <meta property="og:description" content="Snap your plate and get calories and macros in seconds. The coach suggests your workout from what you ate.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nutrik.driftstudio.tech/en/">
+  <meta property="og:image" content="https://nutrik.driftstudio.tech/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://nutrik.driftstudio.tech/en/">
   <link rel="alternate" hreflang="es" href="https://nutrik.driftstudio.tech/">
   <link rel="alternate" hreflang="en" href="https://nutrik.driftstudio.tech/en/">
   <link rel="alternate" hreflang="x-default" href="https://nutrik.driftstudio.tech/">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: #1A1A2E;
-      background: #FFFFFF;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(180deg, #FFFFFF 0%, #F0FFF4 100%);
-      padding: 80px 24px 100px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -100px;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(29, 185, 84, 0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-    .hero-inner {
-      max-width: 720px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 28px;
-      font-weight: 800;
-      color: #1DB954;
-      margin-bottom: 40px;
-    }
-    .logo-leaf {
-      font-size: 36px;
-    }
-    h1 {
-      font-size: 56px;
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -1.5px;
-      margin-bottom: 20px;
-      color: #1A1A2E;
-    }
-    h1 span {
-      color: #1DB954;
-    }
-    .subtitle {
-      font-size: 20px;
-      color: #555555;
-      max-width: 560px;
-      margin: 0 auto 40px;
-      line-height: 1.5;
-    }
-    .badges {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #FFFFFF;
-      border: 1px solid #E5E7EB;
-      padding: 10px 18px;
-      border-radius: 100px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #555555;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .coming-soon {
-      display: inline-block;
-      background: #1A1A2E;
-      color: #FFFFFF;
-      padding: 16px 36px;
-      border-radius: 100px;
-      font-weight: 700;
-      font-size: 16px;
-      margin-top: 20px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-    .coming-soon-note {
-      display: block;
-      font-size: 13px;
-      color: #757575;
-      margin-top: 12px;
-    }
-
-    /* Features */
-    .features {
-      padding: 80px 24px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-    .features-title {
-      text-align: center;
-      font-size: 36px;
-      font-weight: 800;
-      letter-spacing: -0.8px;
-      margin-bottom: 12px;
-    }
-    .features-subtitle {
-      text-align: center;
-      font-size: 17px;
-      color: #757575;
-      max-width: 520px;
-      margin: 0 auto 56px;
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .feature {
-      background: #F8F9FA;
-      border-radius: 20px;
-      padding: 32px 28px;
-      border: 1px solid #EEEEEE;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .feature:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 40px rgba(29, 185, 84, 0.08);
-    }
-    .feature-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: #A8F0C8;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    .feature h3 {
-      font-size: 19px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #1A1A2E;
-    }
-    .feature p {
-      font-size: 14px;
-      color: #555555;
-      line-height: 1.6;
-    }
-
-    /* About */
-    .about {
-      background: #F8F9FA;
-      padding: 80px 24px;
-      text-align: center;
-    }
-    .about-inner {
-      max-width: 680px;
-      margin: 0 auto;
-    }
-    .about h2 {
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
-    }
-    .about p {
-      font-size: 17px;
-      color: #555555;
-      line-height: 1.7;
-      margin-bottom: 16px;
-    }
-
-    /* Footer */
-    footer {
-      background: #1A1A2E;
-      color: #9E9E9E;
-      padding: 48px 24px 32px;
-      text-align: center;
-    }
-    .footer-brand {
-      color: #1DB954;
-      font-weight: 800;
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 32px;
-      flex-wrap: wrap;
-      margin-bottom: 24px;
-    }
-    .footer-links a {
-      color: #E5E7EB;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover {
-      color: #1DB954;
-    }
-    .footer-contact {
-      font-size: 13px;
-      color: #9E9E9E;
-      margin-bottom: 8px;
-    }
-    .footer-contact a {
-      color: #9E9E9E;
-      text-decoration: none;
-    }
-    .footer-copy {
-      font-size: 12px;
-      color: #757575;
-      margin-top: 16px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    @media (max-width: 680px) {
-      h1 { font-size: 40px; }
-      .subtitle { font-size: 17px; }
-      .hero { padding: 60px 20px 80px; }
-      .features { padding: 60px 20px; }
-      .features-title { font-size: 28px; }
-      .about { padding: 60px 20px; }
-      .about h2 { font-size: 26px; }
-    }
-
-    /* Language switch */
-    .lang-switch {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 20px 24px 0;
-      text-align: right;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .lang-switch a {
-      color: #757575;
-      text-decoration: none;
-    }
-    .lang-switch a:hover {
-      color: #1DB954;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <div class="lang-switch"><a href="/">Español</a></div>
+  <header class="barra">
+    <a href="/en/" class="marca"><img src="/assets/apple-touch-icon.png" alt=""> Nutrika <span class="fit">Fit AI</span></a>
+    <nav>
+      <a href="/en/support.html">Support</a>
+      <a href="/en/privacy.html">Privacy</a>
+      <a href="/" class="idioma">Español</a>
+    </nav>
+  </header>
+
   <section class="hero">
     <div class="hero-inner">
-      <div class="logo">
-        <span class="logo-leaf">🌿</span>
-        <span>Nutrika</span>
-      </div>
-      <h1>Your nutritionist <span>in your pocket</span></h1>
-      <p class="subtitle">
-        Snap a photo of your meal and get calories, protein, and macros instantly with AI.
-        Designed for Latin America.
-      </p>
-      <div class="badges">
-        <div class="badge">📸 AI-powered analysis</div>
-        <div class="badge">🥗 Latin American foods</div>
-        <div class="badge">📄 PDF reports</div>
-      </div>
-      <div class="coming-soon">
-        Coming soon to the App Store
-      </div>
-      <span class="coming-soon-note">iOS 14.0 or later</span>
-    </div>
-  </section>
-
-  <section class="features">
-    <h2 class="features-title">Everything you need</h2>
-    <p class="features-subtitle">An app designed to make counting calories as simple as possible.</p>
-    <div class="features-grid">
-      <div class="feature">
-        <div class="feature-icon">📸</div>
-        <h3>AI-powered analysis</h3>
-        <p>Take a photo of your meal and Nutrika identifies the food, estimates portion sizes, and calculates calories and macros automatically.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🥗</div>
-        <h3>Latin American food database</h3>
-        <p>Typical dishes from Chile, Mexico, Colombia, Peru, Argentina, and more. Empanadas, arepas, asado — all included.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">📄</div>
-        <h3>PDF reports</h3>
-        <p>Generate weekly or monthly reports of your nutrition progress and share them with your nutritionist by email.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">📊</div>
-        <h3>Progress charts</h3>
-        <p>Visualize your weight trends, plan adherence, and macro trends with detailed charts.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🎯</div>
-        <h3>Personalized plan</h3>
-        <p>We calculate your ideal nutrition plan based on your data, goals, and activity level.</p>
-      </div>
-      <div class="feature">
-        <div class="feature-icon">🔔</div>
-        <h3>Smart reminders</h3>
-        <p>Notifications at your mealtimes so you never forget to log what you eat.</p>
+      <div>
+        <div class="logotipo">
+          <img src="/assets/icon-512.png" alt="" width="34" height="34">
+          Nutrika <span>Fit AI</span>
+        </div>
+        <h1>Eat. Train. <span>Progress.</span></h1>
+        <div class="dos-en-una">
+          <div class="fila">
+            <div class="pieza">AI calorie counter</div>
+            <div class="mas">+</div>
+            <div class="pieza">GYM workout plans</div>
+          </div>
+          <span class="apunte">Two apps in one</span>
+        </div>
+        <p class="subtitulo">
+          Snap your plate and get calories and macros in seconds. Then the coach suggests the
+          workout that fits what you ate today.
+        </p>
+        <div class="chips">
+          <span class="chip">AI analysis</span>
+          <span class="chip">Gym with video</span>
+          <span class="chip">HIIT at home</span>
+        </div>
+        <a class="boton" href="https://apps.apple.com/app/id6761920280">Download on the App Store</a>
+        <span class="nota">iPhone with iOS 15.1 or later</span>
       </div>
     </div>
   </section>
 
-  <section class="about">
-    <div class="about-inner">
-      <h2>An app built to improve your lifestyle</h2>
+  <section class="seccion">
+    <div class="seccion-inner">
+      <h2>Your food decides your workout</h2>
+      <p class="entradilla">
+        Nutrika counts calories like any other app, but it also trains with you. And it never asks
+        you to make up for what you ate.
+      </p>
+      <div class="rejilla">
+        <div class="tarjeta">
+          <span class="etiqueta">SCAN Ai</span>
+          <h3>Photo, voice or search</h3>
+          <p>Snap the plate, pick a photo from your gallery, describe it out loud or search the catalogue. Fix anything that looks off and the total adjusts on its own.</p>
+        </div>
+        <div class="tarjeta">
+          <span class="etiqueta">The coach</span>
+          <h3>The session of the day</h3>
+          <p>The coach reads what you have eaten today and suggests the session: the long routine if you ate more, a shorter one if you ate less.</p>
+        </div>
+        <div class="tarjeta">
+          <span class="etiqueta">Gym</span>
+          <h3>Programs with video</h3>
+          <p>Four programs that repeat in a cycle, plus standalone workouts by muscle group. Every exercise has a video, and the weight of each set is saved for next time.</p>
+        </div>
+        <div class="tarjeta">
+          <span class="etiqueta">HIIT</span>
+          <h3>10 to 20 minutes at home</h3>
+          <p>Video-guided routines with warm-up and cool-down. Swap, remove or add exercises whenever you want.</p>
+        </div>
+        <div class="tarjeta">
+          <span class="etiqueta">Schedule</span>
+          <h3>The days you train</h3>
+          <p>Pick the days and the time, and the app reminds you. If you already trained that day, it stays quiet.</p>
+        </div>
+        <div class="tarjeta">
+          <span class="etiqueta">Progress</span>
+          <h3>Weight, streak and reports</h3>
+          <p>Weight chart, daily calorie average, weekly budget and a PDF report you can share with your nutritionist.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion franja">
+    <div class="seccion-inner">
+      <h2>Eating well and training go together</h2>
       <p>
-        Nutrika was born from the desire to make nutrition tracking more accessible for Latin Americans.
-        An app designed around our foods, our prices, and our habits.
+        You can train every day, but if your food does not follow, progress stalls. And the other
+        way round: eating perfectly without moving gets you nowhere either. That is why Nutrika
+        puts both in a single app, so what you eat and what you train pull in the same direction.
       </p>
       <p>
-        Made by <strong>Drift Studio</strong>.
+        You log your meals in seconds and the coach suggests the session that fits that day. No
+        juggling two apps and no doing the math: every week you move towards your goal.
       </p>
+      <p><strong>Built by Drift Studio.</strong></p>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="seccion-inner" style="text-align:center">
+      <h2>Start today</h2>
+      <p class="entradilla">Log your first meal in under a minute.</p>
+      <a class="boton" href="https://apps.apple.com/app/id6761920280">Download on the App Store</a>
     </div>
   </section>
 
   <footer>
-    <div class="footer-brand">🌿 Nutrika</div>
-    <div class="footer-links">
+    <div class="pie-marca"><img src="/assets/apple-touch-icon.png" alt=""> Nutrika <span class="fit">Fit AI</span></div>
+    <div class="pie-enlaces">
       <a href="/en/privacy.html">Privacy</a>
       <a href="/en/terms.html">Terms</a>
       <a href="/en/support.html">Support</a>
+      <a href="/en/delete-account.html">Delete account</a>
+      <a href="/">Español</a>
     </div>
-    <p class="footer-contact">
-      Contact: <a href="mailto:admin@driftstudio.tech">admin@driftstudio.tech</a>
-    </p>
-    <p class="footer-copy">© 2026 Nutrika · Drift Studio · All rights reserved</p>
+    <p class="pie-legal">Contact: <a href="mailto:admin@driftstudio.tech">admin@driftstudio.tech</a></p>
+    <p class="pie-legal">© 2026 Nutrika · Inversiones P y P SpA · All rights reserved</p>
   </footer>
 </body>
 </html>

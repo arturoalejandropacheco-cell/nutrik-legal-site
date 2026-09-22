@@ -3,233 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Soporte · Nutrika</title>
+  <title>Soporte · Nutrika Fit AI</title>
   <meta name="description" content="Centro de ayuda de Nutrika — Tu nutricionista en el bolsillo">
+  <meta name="theme-color" content="#0B0B0D">
+  <meta property="og:title" content="Soporte · Nutrika Fit AI">
+  <meta property="og:description" content="Centro de ayuda de Nutrika — Tu nutricionista en el bolsillo">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://nutrik.driftstudio.tech/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="canonical" href="https://nutrik.driftstudio.tech/support.html">
   <link rel="alternate" hreflang="es" href="https://nutrik.driftstudio.tech/support.html">
   <link rel="alternate" hreflang="en" href="https://nutrik.driftstudio.tech/en/support.html">
   <link rel="alternate" hreflang="x-default" href="https://nutrik.driftstudio.tech/support.html">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: #1A1A2E;
-      background: #FFFFFF;
-      -webkit-font-smoothing: antialiased;
-    }
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-    }
-    header {
-      text-align: center;
-      padding: 40px 0 32px;
-    }
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 22px;
-      font-weight: 800;
-      color: #1DB954;
-      text-decoration: none;
-      margin-bottom: 24px;
-    }
-    .brand-leaf { font-size: 26px; }
-    h1 {
-      font-size: 38px;
-      font-weight: 800;
-      letter-spacing: -0.8px;
-      margin-bottom: 12px;
-    }
-    .subtitle {
-      font-size: 17px;
-      color: #757575;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .contact-card {
-      background: linear-gradient(135deg, #1DB954 0%, #0D9B6A 100%);
-      border-radius: 20px;
-      padding: 32px;
-      color: #FFFFFF;
-      text-align: center;
-      margin: 32px 0 48px;
-      box-shadow: 0 10px 30px rgba(29, 185, 84, 0.2);
-    }
-    .contact-card h2 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: #FFFFFF;
-    }
-    .contact-card p {
-      font-size: 15px;
-      margin-bottom: 20px;
-      opacity: 0.95;
-      color: #FFFFFF;
-    }
-    .contact-button {
-      display: inline-block;
-      background: #FFFFFF;
-      color: #1DB954;
-      padding: 14px 32px;
-      border-radius: 100px;
-      font-weight: 700;
-      font-size: 16px;
-      text-decoration: none;
-      transition: transform 0.15s;
-    }
-    .contact-button:hover {
-      transform: translateY(-1px);
-    }
-    .response-time {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 16px;
-      font-size: 13px;
-      opacity: 0.9;
-      color: #FFFFFF;
-    }
-
-    h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-top: 48px;
-      margin-bottom: 20px;
-      letter-spacing: -0.3px;
-    }
-
-    .faq {
-      margin-bottom: 12px;
-      background: #F8F9FA;
-      border-radius: 14px;
-      overflow: hidden;
-      transition: background 0.2s;
-    }
-    .faq:hover { background: #F3F4F6; }
-    .faq summary {
-      padding: 18px 22px;
-      font-weight: 600;
-      font-size: 16px;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after {
-      content: '+';
-      font-size: 24px;
-      font-weight: 400;
-      color: #1DB954;
-      transition: transform 0.2s;
-    }
-    .faq[open] summary::after {
-      content: '−';
-    }
-    .faq-body {
-      padding: 0 22px 20px;
-      font-size: 15px;
-      color: #555555;
-      line-height: 1.65;
-    }
-    .faq-body p { margin-bottom: 10px; }
-    .faq-body ol, .faq-body ul { padding-left: 20px; margin: 10px 0; }
-    .faq-body li { margin-bottom: 4px; }
-    .faq-body strong { color: #1A1A2E; }
-    .faq-body a { color: #1DB954; text-decoration: none; font-weight: 500; }
-    .faq-body a:hover { text-decoration: underline; }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 32px;
-    }
-    .info-card {
-      background: #F8F9FA;
-      border-radius: 14px;
-      padding: 20px;
-      border: 1px solid #EEEEEE;
-    }
-    .info-card-icon {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
-    .info-card h3 {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: #1A1A2E;
-    }
-    .info-card p {
-      font-size: 13px;
-      color: #757575;
-    }
-
-    footer {
-      margin-top: 80px;
-      padding-top: 24px;
-      border-top: 1px solid #EEEEEE;
-      font-size: 13px;
-      color: #9E9E9E;
-      text-align: center;
-    }
-    footer a { color: #757575; margin: 0 12px; }
-    @media (max-width: 600px) {
-      .container { padding: 24px 20px 60px; }
-      h1 { font-size: 28px; }
-      h2 { font-size: 21px; }
-      .contact-card { padding: 24px; }
-    }
-
-    /* Language switch */
-    .lang-switch {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 20px 24px 0;
-      text-align: right;
-      font-size: 13px;
-      font-weight: 600;
-    }
-    .lang-switch a {
-      color: #757575;
-      text-decoration: none;
-    }
-    .lang-switch a:hover {
-      color: #1DB954;
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
-  <div class="lang-switch"><a href="/en/support.html">English</a></div>
-  <div class="container">
-    <header>
-      <a href="/" class="brand"><span class="brand-leaf">🌿</span> Nutrika</a>
-      <h1>Centro de ayuda</h1>
-      <p class="subtitle">Estamos aquí para ayudarte. Revisa las preguntas frecuentes o escríbenos directamente.</p>
-    </header>
+  <header class="barra">
+    <a href="/" class="marca"><img src="/assets/apple-touch-icon.png" alt=""> Nutrika <span class="fit">Fit AI</span></a>
+    <nav>
+      <a href="/support.html">Soporte</a>
+      <a href="/privacy.html">Privacidad</a>
+      <a href="/en/support.html" class="idioma">English</a>
+    </nav>
+  </header>
 
-    <div class="contact-card">
+  <main class="pagina">
+    
+      <h1>Centro de ayuda</h1>
+      <p class="actualizado">Estamos aquí para ayudarte. Revisa las preguntas frecuentes o escríbenos directamente.</p>
+    
+
+    <div class="datos">
       <h2>¿Necesitas ayuda?</h2>
       <p>Escríbenos a nuestro correo de soporte y te responderemos lo antes posible.</p>
-      <a href="mailto:admin@driftstudio.tech?subject=Soporte%20Nutrika" class="contact-button">
+      <a href="mailto:admin@driftstudio.tech?subject=Soporte%20Nutrika" class="boton">
         admin@driftstudio.tech
       </a>
-      <div class="response-time">⏱️ Tiempo de respuesta: dentro de 24-48 horas hábiles</div>
+      <div class="nota">⏱️ Tiempo de respuesta: dentro de 24-48 horas hábiles</div>
     </div>
 
     <h2>Preguntas frecuentes</h2>
 
     <details class="faq">
       <summary>¿Cómo cancelo mi suscripción Nutrika Pro?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>Para cancelar tu suscripción Nutrika Pro:</p>
         <ol>
           <li>Abre la app <strong>Ajustes</strong> en tu iPhone.</li>
@@ -247,7 +69,7 @@
 
     <details class="faq">
       <summary>¿Cómo funciona el análisis de comida con IA?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           Nutrika utiliza Google Gemini AI para analizar fotografías de tus comidas. Cuando
           tomas o seleccionas una foto, la imagen se envía temporalmente a los servidores de
@@ -263,8 +85,64 @@
     </details>
 
     <details class="faq">
+      <summary>¿Cómo decide Nutrika qué entrenamiento me toca?</summary>
+      <div class="cuerpo">
+        <p>
+          El coach mira lo que llevas comido hoy y te propone la sesión: si comiste de más, la
+          rutina larga; si comiste poco, una más corta. Es una sugerencia, no una obligación, y
+          <strong>nunca te pide compensar ni quemar lo que comiste</strong>.
+        </p>
+        <p>
+          En Perfil › ENTRENAMIENTO eliges si quieres gimnasio, funcional o los dos, y eso cambia
+          lo que el coach te propone.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Necesito ir al gimnasio para usar Nutrika?</summary>
+      <div class="cuerpo">
+        <p>
+          No. Las rutinas HIIT son de 10 a 20 minutos en casa y solo necesitan tu cuerpo; algunas
+          usan elástico, mancuerna o kettlebell, y puedes cambiar el ejercicio que no puedas hacer.
+        </p>
+        <p>
+          Si sí vas al gimnasio, tienes cuatro programas que se repiten en ciclo y entrenamientos
+          sueltos por zona, con vídeo en cada ejercicio y el peso de cada serie guardado.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>¿Cómo pongo los días y las horas en que entreno?</summary>
+      <div class="cuerpo">
+        <p>
+          En <strong>Perfil › ENTRENAMIENTO › Calendario de entrenamiento</strong>. Marcas los días,
+          eliges una hora para todos o una hora por día, y guardas.
+        </p>
+        <p>
+          La app te avisa a esa hora. Si ese día ya entrenaste, se calla.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
+      <summary>No me llegan los avisos, ¿qué hago?</summary>
+      <div class="cuerpo">
+        <p>
+          Los avisos son notificaciones de tu teléfono, así que necesitan permiso. Abre
+          <strong>Ajustes › Nutrika › Notificaciones</strong> y actívalas. Si las tienes apagadas,
+          la propia pantalla del calendario te lo avisa y te lleva ahí con un botón.
+        </p>
+        <p>
+          Comprueba también que no tengas activado un modo de concentración que las silencie.
+        </p>
+      </div>
+    </details>
+
+    <details class="faq">
       <summary>¿Por qué mis calorías calculadas son diferentes a otras apps?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           Nutrika calcula tus calorías diarias usando la fórmula científica <strong>Mifflin-St Jeor</strong>
           combinada con factores de actividad física estándar (sedentario, moderado, activo).
@@ -281,7 +159,7 @@
 
     <details class="faq">
       <summary>¿Cómo cambio mis metas nutricionales?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           Puedes ajustar tus metas en cualquier momento:
         </p>
@@ -300,7 +178,7 @@
 
     <details class="faq">
       <summary>¿Puedo exportar mis datos?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           Sí. Nutrika te permite generar <strong>reportes PDF</strong> con tu progreso
           nutricional. Ve al tab <strong>Informe</strong>, selecciona el período (última semana,
@@ -317,7 +195,7 @@
 
     <details class="faq">
       <summary>¿Cómo elimino mi cuenta permanentemente?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>Para eliminar tu cuenta y todos tus datos:</p>
         <ol>
           <li>Abre Nutrika y ve al tab <strong>Perfil</strong>.</li>
@@ -335,26 +213,27 @@
 
     <details class="faq">
       <summary>¿Nutrika funciona sin conexión a internet?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           Nutrika requiere conexión a internet para la mayoría de sus funciones, incluyendo:
         </p>
         <ul>
           <li>Iniciar sesión y sincronizar tus datos.</li>
-          <li>Analizar fotografías con IA.</li>
+          <li>Analizar fotografías y audios con IA.</li>
           <li>Generar y enviar reportes PDF.</li>
           <li>Actualizar tu suscripción.</li>
         </ul>
         <p>
-          Algunas funciones como ver tu historial reciente pueden estar disponibles brevemente
-          sin conexión, pero para una experiencia completa necesitas internet.
+          <strong>Los vídeos de los ejercicios sí funcionan sin conexión:</strong> viajan dentro de la
+          app, así que puedes entrenar en un gimnasio sin señal. Ver tu historial reciente también
+          funciona un rato sin internet, pero para todo lo demás lo necesitas.
         </p>
       </div>
     </details>
 
     <details class="faq">
       <summary>¿Los reembolsos de suscripción los gestiona Nutrika?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           No. Todos los pagos se procesan a través de Apple App Store. Los reembolsos deben
           solicitarse directamente a Apple:
@@ -371,7 +250,7 @@
 
     <details class="faq">
       <summary>¿Cómo funciona el programa de referidos?</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           Comparte tu código de referido (disponible en tu Perfil) con amigos. Cuando un amigo
           se suscribe a Nutrika Pro usando tu código, recibes una <strong>comisión del 30%</strong>
@@ -386,7 +265,7 @@
 
     <details class="faq">
       <summary>Encontré un bug o tengo una sugerencia</summary>
-      <div class="faq-body">
+      <div class="cuerpo">
         <p>
           ¡Nos encantaría escucharte! Escribe a
           <a href="mailto:admin@driftstudio.tech?subject=Feedback%20Nutrika">admin@driftstudio.tech</a>
@@ -402,37 +281,41 @@
     </details>
 
     <h2>Información útil</h2>
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-card-icon">📧</div>
+    <div class="rejilla">
+      <div class="tarjeta">
+        <div class="etiqueta">📧</div>
         <h3>Correo</h3>
         <p>admin@driftstudio.tech</p>
       </div>
-      <div class="info-card">
-        <div class="info-card-icon">⏱️</div>
+      <div class="tarjeta">
+        <div class="etiqueta">⏱️</div>
         <h3>Respuesta</h3>
         <p>24-48 horas hábiles</p>
       </div>
-      <div class="info-card">
-        <div class="info-card-icon">🌎</div>
+      <div class="tarjeta">
+        <div class="etiqueta">🌎</div>
         <h3>Idioma</h3>
-        <p>Español (LATAM)</p>
+        <p>Español e inglés</p>
       </div>
-      <div class="info-card">
-        <div class="info-card-icon">📱</div>
+      <div class="tarjeta">
+        <div class="etiqueta">📱</div>
         <h3>Plataforma</h3>
-        <p>iOS 14.0 o superior</p>
+        <p>iOS 15.1 o posterior</p>
       </div>
     </div>
-
-    <footer>
-      <p>
-        <a href="/">Inicio</a> ·
-        <a href="/privacy.html">Privacidad</a> ·
-        <a href="/terms.html">Términos</a>
-      </p>
-      <p style="margin-top: 8px;">© 2026 Nutrika · Todos los derechos reservados</p>
-    </footer>
-  </div>
+  </main>
+  <footer>
+    <div class="pie-marca"><img src="/assets/apple-touch-icon.png" alt=""> Nutrika <span class="fit">Fit AI</span></div>
+    <div class="pie-enlaces">
+      <a href="/">Inicio</a>
+      <a href="/privacy.html">Privacidad</a>
+      <a href="/terms.html">Términos</a>
+      <a href="/support.html">Soporte</a>
+      <a href="/delete-account.html">Eliminar cuenta</a>
+      <a href="/en/">English</a>
+    </div>
+    <p class="pie-legal">Contacto: <a href="mailto:admin@driftstudio.tech">admin@driftstudio.tech</a></p>
+    <p class="pie-legal">© 2026 Nutrika · Inversiones P y P SpA · Todos los derechos reservados</p>
+  </footer>
 </body>
 </html>
